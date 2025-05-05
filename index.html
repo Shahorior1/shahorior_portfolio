@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shahorior's Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/effects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
+</head>
+<body class="loading">
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <svg class="logo-svg" width="100" height="100" viewBox="0 0 100 100">
+                <path d="M30,50 L70,20 L70,80 L30,50 Z" class="logo-path"></path>
+            </svg>
+            <div class="loading-text">
+                <span>L</span>
+                <span>O</span>
+                <span>A</span>
+                <span>D</span>
+                <span>I</span>
+                <span>N</span>
+                <span>G</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="theme-switch">
+        <label for="theme-switch" class="switch-label">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <span class="ball"></span>
+        </label>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="#">Shahorior</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div id="hero-canvas"></div>
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="glitch-wrapper">
+                    <h1>Hi, I'm <span class="highlight glitch" data-text="Shahorior">Shahorior</span></h1>
+                </div>
+                <h2 class="typewriter">Full Stack Developer</h2>
+                <p>I build beautiful and functional web applications.</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary-btn"><span>View My Work</span></a>
+                    <a href="#contact" class="btn secondary-btn"><span>Contact Me</span></a>
+                </div>
+                <div class="text-sphere-container">
+                    <div id="tagcloud" class="tagcloud"></div>
+                </div>
+                <div class="social-links">
+                    <a href="#" target="_blank" data-tooltip="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank" data-tooltip="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank" data-tooltip="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="scroll-indicator">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <div class="arrow">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="section-bg-graphics">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+        <div class="container">
+            <h2 class="section-title" data-text="About Me">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="img/profile.jpg" alt="Profile Picture">
+                    <div class="image-frame"></div>
+                    <div class="orbiting-tech">
+                        <span class="orbit-item"><i class="fab fa-js"></i></span>
+                        <span class="orbit-item"><i class="fab fa-react"></i></span>
+                        <span class="orbit-item"><i class="fab fa-node"></i></span>
+                        <span class="orbit-item"><i class="fab fa-html5"></i></span>
+                        <span class="orbit-item"><i class="fab fa-css3-alt"></i></span>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p>Hello! I'm <span class="highlight">Shahorior</span>, a passionate full-stack developer with a keen interest in creating engaging web experiences. With a strong foundation in both front-end and back-end technologies, I strive to build applications that are not only visually appealing but also highly functional.</p>
+                    <p>I enjoy solving complex problems and continuously learning new technologies to stay at the forefront of web development. When I'm not coding, you can find me reading tech blogs, contributing to open-source projects, or exploring new coffee shops in my city.</p>
+                    <div class="tech-stack">
+                        <span>JavaScript</span>
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>TypeScript</span>
+                        <span>MongoDB</span>
+                    </div>
+                    <a href="#" class="btn primary-btn download-btn">
+                        <i class="fas fa-download"></i>
+                        <span>Download CV</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="section-bg-graphics">
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+        <div class="container">
+            <h2 class="section-title" data-text="My Projects">My Projects</h2>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+            <div class="project-grid">
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="img/project1.jpg" alt="Project 1">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <h3>E-Commerce Website</h3>
+                                <p>A full-featured online store with product catalog, shopping cart, and payment integration.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>E-Commerce Website</h3>
+                        <p>A full-featured online store with product catalog, shopping cart, and payment integration.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://saporabd.com/" target="_blank" class="btn small-btn primary-btn">Live Demo<a>
+                            <a href="https://github.com/Shahorior1/saporabd" target="_blank" class="btn small-btn secondary-btn">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="mobile">
+                    <div class="project-image">
+                        <img src="img/project2.png" alt="Project 2">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <h3>Task Management App</h3>
+                                <p>A productivity application for managing tasks, deadlines, and team collaboration.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Task Management App</h3>
+                        <p>A productivity application for managing tasks, deadlines, and team collaboration.</p>
+                        <div class="project-tech">
+                            <span>Vue.js</span>
+                            <span>Express</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://task-management-roan-one.vercel.app/" target="_blank" class="btn small-btn primary-btn">Live Demo</a>
+                            <a href="https://github.com/Shahorior1/task-management" target="_blank" class="btn small-btn secondary-btn">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="design">
+                    <div class="project-image">
+                        <img src="img/project3.jpg" alt="Project 3">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <h3>Weather Dashboard</h3>
+                                <p>Real-time weather forecasting application with location-based data and interactive maps.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Weather Dashboard</h3>
+                        <p>Real-time weather forecasting application with location-based data and interactive maps.</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>API Integration</span>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="btn small-btn primary-btn">Live Demo</a>
+                            <a href="#" target="_blank" class="btn small-btn secondary-btn">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="section-bg-graphics">
+            <div class="shape shape-5"></div>
+            <div class="shape shape-6"></div>
+        </div>
+        <div class="container">
+            <h2 class="section-title" data-text="My Skills">My Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span data-percent="95%">HTML5</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span data-percent="90%">CSS3</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span data-percent="85%">JavaScript</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span data-percent="80%">React</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span data-percent="85%">Node.js</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span data-percent="80%">Express</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span data-percent="75%">MongoDB</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span data-percent="70%">SQL</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Others</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span data-percent="90%">Git</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span data-percent="95%">Responsive Design</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span data-percent="80%">UI/UX Principles</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span data-percent="85%">RESTful APIs</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="section-bg-graphics">
+            <div class="shape shape-7"></div>
+            <div class="shape shape-8"></div>
+        </div>
+        <div class="container">
+            <h2 class="section-title" data-text="Get In Touch">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>email@example.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+123 456 7890</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>City, Country</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" target="_blank" data-tooltip="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank" data-tooltip="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" target="_blank" data-tooltip="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <div class="interactive-bg"></div>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <span class="input-focus-effect"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <span class="input-focus-effect"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                            <span class="input-focus-effect"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                            <span class="input-focus-effect"></span>
+                        </div>
+                        <button type="submit" class="btn primary-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <svg width="50" height="50" viewBox="0 0 100 100">
+                        <path d="M30,50 L70,20 L70,80 L30,50 Z" class="logo-path"></path>
+                    </svg>
+                    <p>Shahorior</p>
+                </div>
+                <p class="copyright">&copy; 2023 Shahorior. All Rights Reserved.</p>
+                <div class="back-to-top">
+                    <a href="#home"><i class="fas fa-chevron-up"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/3d-effect.js"></script>
+</body>
+</html> 

@@ -11,6 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body class="loading">
     <!-- Preloader -->
@@ -444,11 +445,11 @@
                     <div class="interactive-bg"></div>
                     <form id="contactForm">
                         <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <input type="text" id="name" name="user_name" placeholder="Your Name" required>
                             <span class="input-focus-effect"></span>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <input type="email" id="email" name="user_email" placeholder="Your Email" required>
                             <span class="input-focus-effect"></span>
                         </div>
                         <div class="form-group">
@@ -464,6 +465,20 @@
                             <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
                         </button>
                     </form>
+                    <div id="form-status" class="form-status">
+                        <div class="success-message">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Thank you!</h3>
+                            <p>Your message has been sent successfully. I'll get back to you soon!</p>
+                            <button class="btn primary-btn" id="send-another">Send Another</button>
+                        </div>
+                        <div class="error-message">
+                            <i class="fas fa-times-circle"></i>
+                            <h3>Oops!</h3>
+                            <p>Something went wrong. Please try again later.</p>
+                            <button class="btn primary-btn" id="try-again">Try Again</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -491,5 +506,6 @@
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="js/animations.js"></script>
+    <script src="js/contact.js"></script>
 </body>
 </html> 

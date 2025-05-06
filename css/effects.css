@@ -336,7 +336,9 @@ section:hover .shape {
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--box-shadow);
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1), 
+                opacity 0.4s cubic-bezier(0.215, 0.61, 0.355, 1),
+                box-shadow 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
     border: 1px solid var(--glass-border);
     transform-style: preserve-3d;
     perspective: 1000px;
@@ -480,17 +482,51 @@ section:hover .shape {
 }
 
 .filter-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    padding-right: 26px;
+    overflow: visible;
     background-color: var(--glass-bg);
     color: var(--text-color);
     border: 1px solid var(--glass-border);
-    padding: 8px 16px;
     border-radius: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 0.9rem;
     font-weight: 500;
-    position: relative;
-    overflow: hidden;
+}
+
+.filter-count {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--accent-color);
+    color: white;
+    font-size: 0.75rem;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.filter-btn.active .filter-count,
+.filter-btn:hover .filter-count {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.filter-btn:not(.active) .filter-count {
+    background-color: var(--primary-color);
 }
 
 .filter-btn::before {
@@ -1265,5 +1301,27 @@ footer {
 [data-aos="slide-right"].aos-animate {
     opacity: 1;
     transform: translateX(0);
+}
+
+@keyframes cardEnter {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes cardExit {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
 }
 

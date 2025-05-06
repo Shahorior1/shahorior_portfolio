@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/effects.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
@@ -29,6 +30,9 @@
             </div>
         </div>
     </div>
+
+    <!-- Page Transition -->
+    <div class="page-transition"></div>
 
     <!-- Theme Toggle -->
     <div class="theme-toggle">
@@ -111,9 +115,9 @@
             <div class="shape shape-2"></div>
         </div>
         <div class="container">
-            <h2 class="section-title" data-text="About Me">About Me</h2>
+            <h2 class="section-title" data-text="About Me" data-aos="fade-up">About Me</h2>
             <div class="about-content">
-                <div class="about-image">
+                <div class="about-image" data-aos="fade-right" data-aos-delay="200">
                     <img src="img/profile.jpg" alt="Profile Picture">
                     <div class="image-frame"></div>
                     <div class="orbiting-tech">
@@ -124,7 +128,7 @@
                         <span class="orbit-item"><i class="fab fa-css3-alt"></i></span>
                     </div>
                 </div>
-                <div class="about-text">
+                <div class="about-text" data-aos="fade-left" data-aos-delay="300">
                     <p>Hello! I'm <span class="highlight">Shahorior</span>, a passionate full-stack developer with a keen interest in creating engaging web experiences. With a strong foundation in both front-end and back-end technologies, I strive to build applications that are not only visually appealing but also highly functional.</p>
                     <p>I enjoy solving complex problems and continuously learning new technologies to stay at the forefront of web development. When I'm not coding, you can find me reading tech blogs, contributing to open-source projects, or exploring new coffee shops in my city.</p>
                     <div class="tech-stack">
@@ -149,15 +153,15 @@
             <div class="shape shape-4"></div>
         </div>
         <div class="container">
-            <h2 class="section-title" data-text="My Projects">My Projects</h2>
-            <div class="filters">
+            <h2 class="section-title" data-text="My Projects" data-aos="fade-up">My Projects</h2>
+            <div class="filters" data-aos="fade-up" data-aos-delay="100">
                 <button class="filter-btn active" data-filter="all">All</button>
                 <button class="filter-btn" data-filter="web">Web</button>
                 <button class="filter-btn" data-filter="mobile">Mobile</button>
                 <button class="filter-btn" data-filter="design">Design</button>
             </div>
             <div class="project-grid">
-                <div class="project-card" data-category="web">
+                <div class="project-card" data-category="web" data-aos="zoom-fade" data-aos-delay="200">
                     <div class="project-image">
                         <img src="img/project1.jpg" alt="Project 1">
                         <div class="project-overlay">
@@ -181,7 +185,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card" data-category="mobile">
+                <div class="project-card" data-category="mobile" data-aos="zoom-fade" data-aos-delay="300">
                     <div class="project-image">
                         <img src="img/project2.png" alt="Project 2">
                         <div class="project-overlay">
@@ -205,7 +209,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card" data-category="design">
+                <div class="project-card" data-category="design" data-aos="zoom-fade" data-aos-delay="400">
                     <div class="project-image">
                         <img src="img/project3.jpg" alt="Project 3">
                         <div class="project-overlay">
@@ -229,7 +233,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card" data-category="web">
+                <div class="project-card" data-category="web" data-aos="zoom-fade" data-aos-delay="500">
                     <div class="project-image">
                         <img src="img/plant-shop.jpg" alt="Plant Shop Landing Page">
                         <div class="project-overlay">
@@ -253,7 +257,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card" data-category="web">
+                <div class="project-card" data-category="web" data-aos="zoom-fade" data-aos-delay="600">
                     <div class="project-image">
                         <img src="img/proxy-bdix.jpg" alt="Proxy BDIX">
                         <div class="project-overlay">
@@ -287,9 +291,9 @@
             <div class="shape shape-6"></div>
         </div>
         <div class="container">
-            <h2 class="section-title" data-text="My Skills">My Skills</h2>
+            <h2 class="section-title" data-text="My Skills" data-aos="fade-up">My Skills</h2>
             <div class="skills-container">
-                <div class="skill-category">
+                <div class="skill-category" data-aos="slide-right" data-aos-delay="200">
                     <h3>Frontend</h3>
                     <div class="skill-list">
                         <div class="skill-item">
@@ -318,7 +322,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
                     <h3>Backend</h3>
                     <div class="skill-list">
                         <div class="skill-item">
@@ -347,7 +351,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category" data-aos="slide-left" data-aos-delay="400">
                     <h3>Tools & Others</h3>
                     <div class="skill-list">
                         <div class="skill-item">
@@ -376,7 +380,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category" data-aos="slide-right" data-aos-delay="500">
                     <h3>3D / Animation</h3>
                     <div class="skill-list">
                         <div class="skill-item">
@@ -415,9 +419,9 @@
             <div class="shape shape-8"></div>
         </div>
         <div class="container">
-            <h2 class="section-title" data-text="Get In Touch">Get In Touch</h2>
+            <h2 class="section-title" data-text="Get In Touch" data-aos="fade-up">Get In Touch</h2>
             <div class="contact-content">
-                <div class="contact-info">
+                <div class="contact-info" data-aos="slide-right" data-aos-delay="200">
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <p>sadikshahorioremon@gmail.com</p>
@@ -436,7 +440,7 @@
                         <a href="#" target="_blank" data-tooltip="Twitter"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
-                <div class="contact-form">
+                <div class="contact-form" data-aos="slide-left" data-aos-delay="300">
                     <div class="interactive-bg"></div>
                     <form id="contactForm">
                         <div class="form-group">
@@ -484,5 +488,8 @@
 
     <script src="js/script.js"></script>
     <script src="js/3d-effect.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/animations.js"></script>
 </body>
 </html> 
